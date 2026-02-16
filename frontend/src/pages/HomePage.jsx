@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
-import WelcomeSection from '../components/WelcomeSection';
+import AboutSection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
+import ProcessSection from '../components/ProcessSection';
+import GallerySection from '../components/GallerySection';
 import OpeningHours from '../components/OpeningHours';
-import Services from '../components/Services';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import './HomePage.css';
@@ -11,31 +13,33 @@ import './HomePage.css';
 const HomePage = () => {
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add('animate-in');
         }
       });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.fade-in-section');
-    animatedElements.forEach(el => observer.observe(el));
+    const elements = document.querySelectorAll('.fade-up, .fade-in, .slide-in-left, .slide-in-right');
+    elements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
   return (
     <div className="home-page">
-      <Header />
+      <Navigation />
       <HeroSection />
-      <WelcomeSection />
+      <AboutSection />
+      <ServicesSection />
+      <ProcessSection />
+      <GallerySection />
       <OpeningHours />
-      <Services />
       <ContactSection />
       <Footer />
     </div>

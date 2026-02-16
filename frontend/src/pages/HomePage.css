@@ -1,15 +1,37 @@
 .home-page {
   width: 100%;
   min-height: 100vh;
+  background: #000;
 }
 
-.fade-in-section {
+.fade-up,
+.fade-in,
+.slide-in-left,
+.slide-in-right {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fade-in-section.visible {
+.fade-up {
+  transform: translateY(60px);
+}
+
+.fade-in {
+  transform: scale(0.95);
+}
+
+.slide-in-left {
+  transform: translateX(-60px);
+}
+
+.slide-in-right {
+  transform: translateX(60px);
+}
+
+.fade-up.animate-in,
+.fade-in.animate-in,
+.slide-in-left.animate-in,
+.slide-in-right.animate-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateX(0) scale(1);
 }
