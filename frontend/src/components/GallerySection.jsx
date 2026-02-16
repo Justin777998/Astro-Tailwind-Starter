@@ -5,8 +5,7 @@ const GallerySection = () => {
   const images = [
     'https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?w=800',
     'https://images.unsplash.com/photo-1620584899131-a5ff5f8fbb03?w=800',
-    'https://images.pexels.com/photos/20051462/pexels-photo-20051462.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/29504461/pexels-photo-29504461.jpeg?auto=compress&cs=tinysrgb&w=800'
+    'https://images.pexels.com/photos/20051462/pexels-photo-20051462.jpeg?auto=compress&cs=tinysrgb&w=800'
   ];
 
   return (
