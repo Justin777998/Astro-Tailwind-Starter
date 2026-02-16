@@ -1,0 +1,60 @@
+.header {
+  background-color: #3a3a3c;
+  color: white;
+  padding: 2rem 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled {
+  padding: 1.2rem 4rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.logo-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.header.scrolled .logo-title {
+  font-size: 1.5rem;
+}
+
+.logo-subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .logo-title {
+    font-size: 1.5rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.8rem;
+  }
+}
