@@ -1,0 +1,62 @@
+.welcome-section {
+  background-color: #f5f5f5;
+  padding: 4rem 4rem;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.section-divider {
+  width: 4px;
+  background-color: #000;
+  flex-shrink: 0;
+}
+
+.section-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ffd900;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 217, 0, 0.4);
+}
+
+.badge-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 3rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .badge-text {
+    font-size: 0.9rem;
+  }
+}
