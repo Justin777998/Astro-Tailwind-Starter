@@ -1,32 +1,68 @@
 import React from 'react';
-import { Instagram } from 'lucide-react';
+import { Instagram, Facebook, Twitter } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <a 
-          href="https://www.instagram.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="instagram-link"
-          aria-label="Instagram"
-        >
-          <div className="instagram-icon-wrapper">
-            <Instagram size={32} className="instagram-icon" />
+      <div className="footer-container">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <span className="logo-text">TEKINZ</span>
+              <span className="logo-accent">GARAGE</span>
+            </div>
+            <p className="footer-tagline">
+              Premium Car Detailing & Care
+            </p>
           </div>
-        </a>
-        
-        <div className="footer-credits">
-          <p className="credit-text">
-            Icons made by <span className="credit-highlight">Pixel perfect</span> from{' '}
-            <span className="credit-highlight">www.flaticon.com</span>
-          </p>
+
+          <div className="footer-links">
+            <div className="footer-column">
+              <h4 className="column-title">Kontakt</h4>
+              <ul className="link-list">
+                <li>Eyßelheideweg 9</li>
+                <li>38518 Gifhorn</li>
+                <li>+49 170 528 3749</li>
+                <li>tekinzgarage@gmx.de</li>
+              </ul>
+            </div>
+
+            <div className="footer-column">
+              <h4 className="column-title">Öffnungszeiten</h4>
+              <ul className="link-list">
+                <li>Mo-Fr: 08:00 - 17:00</li>
+                <li>Sa: geschlossen</li>
+                <li>So: geschlossen</li>
+              </ul>
+            </div>
+
+            <div className="footer-column">
+              <h4 className="column-title">Folgen Sie uns</h4>
+              <div className="social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <Instagram size={24} />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <Facebook size={24} />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <Twitter size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="footer-copyright">
-          <p>© 2021 · Tekinz Garage</p>
+        <div className="footer-bottom">
+          <p className="copyright">
+            © {currentYear} Tekinz Garage. Alle Rechte vorbehalten.
+          </p>
+          <p className="credits">
+            Made with <span className="heart">♥</span> in Germany
+          </p>
         </div>
       </div>
     </footer>
