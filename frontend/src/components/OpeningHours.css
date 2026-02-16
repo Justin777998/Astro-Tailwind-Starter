@@ -1,0 +1,46 @@
+.opening-hours-section {
+  background-color: #ffffff;
+  padding: 4rem 4rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hours-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.hours-item:hover {
+  transform: translateX(10px);
+}
+
+.hours-day {
+  font-weight: 700;
+  color: #333;
+  min-width: 180px;
+}
+
+.hours-time {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .opening-hours-section {
+    padding: 3rem 2rem;
+  }
+
+  .hours-day {
+    min-width: 150px;
+    font-size: 1rem;
+  }
+
+  .hours-time {
+    font-size: 1rem;
+  }
+}

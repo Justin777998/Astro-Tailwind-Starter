@@ -1,0 +1,55 @@
+.contact-section {
+  background-color: #ffffff;
+  padding: 4rem 4rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-business-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: #0066cc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.contact-item:hover {
+  color: #004499;
+  transform: translateX(10px);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 2rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+}
