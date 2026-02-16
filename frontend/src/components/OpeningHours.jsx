@@ -1,24 +1,32 @@
 import React from 'react';
+import { Clock } from 'lucide-react';
 import './OpeningHours.css';
 
 const OpeningHours = () => {
-  const hours = [
-    { day: 'Montag - Freitag:', time: '08:00 - 17:00' },
-    { day: 'Samstag:', time: 'geschlossen' },
-    { day: 'Sonntag:', time: 'geschlossen' }
+  const schedule = [
+    { day: 'Montag - Freitag', hours: '08:00 - 17:00', isOpen: true },
+    { day: 'Samstag', hours: 'geschlossen', isOpen: false },
+    { day: 'Sonntag', hours: 'geschlossen', isOpen: false }
   ];
 
   return (
-    <section className="opening-hours-section fade-in-section">
-      <div className="section-container">
-        <div className="section-divider"></div>
-        <div className="section-content">
-          <h2 className="section-title">Öffnungszeiten</h2>
+    <section className="opening-hours-section">
+      <div className="hours-container">
+        <div className="hours-content fade-up">
+          <div className="hours-icon">
+            <Clock size={48} />
+          </div>
+          <h2 className="hours-title">
+            <span className="title-highlight">Öffnungszeiten</span>
+          </h2>
           <div className="hours-list">
-            {hours.map((item, index) => (
+            {schedule.map((item, index) => (
               <div key={index} className="hours-item">
                 <span className="hours-day">{item.day}</span>
-                <span className="hours-time">{item.time}</span>
+                <span className="hours-divider"></span>
+                <span className={`hours-time ${!item.isOpen ? 'closed' : ''}`}>
+                  {item.hours}
+                </span>
               </div>
             ))}
           </div>
